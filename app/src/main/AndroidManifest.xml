@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrTr">
         <activity
+            android:name=".views.RegionActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.LoginActivity"
             android:exported="true" />
         <activity

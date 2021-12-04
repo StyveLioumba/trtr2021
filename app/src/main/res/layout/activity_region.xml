@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgsite" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/food_image"
+            android:layout_marginTop="-53dp"
+            android:background="@drawable/background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Formulaire de reservation"
+                android:textColor="#45bf55"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:gravity="left"
+                android:layout_gravity="center"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/food_image"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColorHint="@android:color/black"
+                    app:boxBackgroundColor="#F4F8FB"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxStrokeWidth="0dp"
+                    app:endIconDrawable="@drawable/search"
+                    app:hintTextAppearance="?android:textAppearance"
+                    app:hintTextColor="@android:color/black"
+                    app:placeholderText="Recherche "
+                    android:layout_weight="2"
+                    app:placeholderTextColor="@android:color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="#acacac"
+                        android:fontFamily="@font/ubuntu_mono"
+                        android:inputType="text"
+                        android:textColor="#acacac"
+                        android:textColorHint="#acacac"
+                        tools:targetApi="m" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/filter"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

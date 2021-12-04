@@ -2,6 +2,7 @@ package com.touritouri.trtr.models;
 
 public class Departement {
     private String name;
+    private String description;
     private String image;
     private String uid;
 
@@ -14,6 +15,14 @@ public class Departement {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getImage() {
